@@ -1,0 +1,12 @@
+--- src/versiondefs.cmake	2021-08-22 18:03:22.498213473 -0400
++++ "src/versiondefs (copy).cmake"	2021-08-24 16:00:25.297312919 -0400
+@@ -1,7 +1,7 @@
+ # Variables for generating version.h
+ 
+-set(PRODUCT_NAME "ECWolf")
+-set(PRODUCT_IDENTIFIER "org.ecwolf.ECWolf")
++set(PRODUCT_NAME "ECWolf-git")
++set(PRODUCT_IDENTIFIER "org.ecwolf.ECWolf-git")
+ if(APPLE OR WIN32)
+ 	set(PRODUCT_DIRECTORY "${PRODUCT_NAME}")
+ else()
