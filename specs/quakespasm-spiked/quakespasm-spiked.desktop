@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Quakespasm-Spiked
+Comment=First-person shooter game
+Exec=quakespasm-spiked
+StartupNotify=false
+Terminal=false
+Type=Application
+Icon=quakespasm-spiked
+Categories=Game;
+Keywords=game;shooter;

@@ -1,0 +1,27 @@
+diff --git a/quakespasm/Quake/Makefile b/quakespasm/Quake/Makefile
+index 9304ed61..a541f03f 100644
+--- quakespasm/Quake/Makefile
++++ quakespasm/Quake/Makefile
+@@ -304,18 +304,18 @@ OBJS := strlcat.o \
+ # Linux build rules
+ # ------------------------
+ 
+-quakespasm:	$(OBJS)
++quakespasm-spiked:	$(OBJS)
+ 	$(LINKER) $(OBJS) $(LDFLAGS) $(LIBS) $(SDL_LIBS) -o $@
+ 	$(call do_strip,$@)
+ 
+ image.o: lodepng.c lodepng.h stb_image_write.h
+ 
+-release:	quakespasm
++release:	quakespasm-spiked
+ debug:
+ 	$(error Use "make DEBUG=1")
+ 
+ clean:
+ 	rm -f $(shell find . \( -name '*~' -o -name '#*#' -o -name '*.o' -o -name '*.res' -o -name $(DEFAULT_TARGET) \) -print)
+ 
+-install:	quakespasm
+-	cp quakespasm /usr/local/games/quake
++install:	quakespasm-spiked
++	cp quakespasm-spiked /usr/local/games/quake
