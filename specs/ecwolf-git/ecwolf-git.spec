@@ -1,7 +1,7 @@
-%global revision ac4a229
+%global revision 32714c1
 
 Name:     ecwolf-git
-Version:  1.3.3
+Version:  1.4.1
 Release:  2%{revision}%{?dist}
 Summary:  Original Wolfenstein 3D and Doom source releases plus Wolf4SDL
 License:  GPLv2 or EULA
@@ -20,7 +20,7 @@ rm -rf %{NVdir}
 git clone %{url}.git %{NVdir}
 cd %{NVdir}
 git checkout %{revision}
-%patch0
+%patch 0
 
 %build
 cd %{NVdir}
@@ -49,6 +49,9 @@ install -m 755 %{name}.sh %{buildroot}/usr/bin/%{name}
 %{_mandir}/man6/ecwolf.6.gz
 
 %changelog
+* Tue Nov 7 2023 Patrick Pace <pqp@fedoraproject.org> - 1.4.1-32714c1
+- Now using commit hash 32714c1
+
 * Tue Aug 24 2021 Patrick Pace <pqp@fedoraproject.org> - 1.3.3-2-ac4a229
 - Added patch that changes executable name to ecwolf-git
 
